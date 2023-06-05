@@ -1,9 +1,9 @@
-import ContactBook from './ContactBook/ContactBook';
+import Contacts from './Contacts/Contacts';
 
 export const App = () => {
   return (
     <div>
-      <ContactBook />
+      <Contacts />
     </div>
   );
 };

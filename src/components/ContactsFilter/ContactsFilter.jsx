@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
+
 import { getFilter } from 'Redux/Filter/filter-selectors';
 import { setFilter } from 'Redux/Filter/filter-slice';
 
-import css from './Filter.module.css';
+import css from './ContactsFilter.module.css';
 
-const Filter = () => {
+const ContactsFilter = () => {
   const filter = useSelector(getFilter);
 
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const Filter = () => {
   const handleFilter = ({ target }) => {
     dispatch(setFilter(target.value));
   };
+
   return (
     <div className={css.wrapper}>
       <label>Find contacts by name</label>
@@ -27,4 +29,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default ContactsFilter;
